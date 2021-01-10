@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {%- seo -%}
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+        <!-- CSS Reset -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
+        <!-- Milligram CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+
+        <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+
+
+
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="/" class="brand"><img src="{{ '/assets/img/bankson.png' | relative_url }}"> API-dokumentaatio</a>
+        </div>
+        <div class="layout">
+            <div class="navi">
+                {%- for p in site.articles -%}
+                    <a class="{%- if p.url == page.url -%}active{%- endif -%}" href="{{ p.url }}">{{ p.title }}</a>
+                {%- endfor -%}
+            </div>
+            <div class="content-pane">
+                <div class="row">
+                    <div class="column">
+                        <div class="container">
+                            <h1>{{ page.title }}</h1>
+                            {{ content }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
