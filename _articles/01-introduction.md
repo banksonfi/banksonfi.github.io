@@ -2,7 +2,7 @@
 title: "Johdanto"
 ---
 
-Banksonin rajapinta löytyy osoitteesta https://mb.bankson.fi/api/v2
+Banksonin rajapinta löytyy osoitteesta `https://mb.bankson.fi/api/v2`
 
 Rajapinta vastaanottaa ja lähettää dataa pääsääntöisesti JSON-muodossa.
 
